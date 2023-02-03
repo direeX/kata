@@ -157,8 +157,7 @@ public class Kata {
 }
  */
 
-import java.util.Arrays;
-import java.util.Scanner;
+
 
 /* #zad 9 (7)
 Happy Holidays fellow Code Warriors!
@@ -218,39 +217,185 @@ public class Kata{
 
 /*
 #zad 11 (Akademia kodu 2)
-Zamień dwie liczby
+Zamień dwie liczby. Nie zadziała w metodzie ponieważ to są kopie tych referencji.
 
- */
 
 class Kata {
-
-
 public static void main(String[]args){
     Scanner scanner = new Scanner(System.in);
     System.out.println("Podaj pierwszą liczbę");
     int firstNumber = scanner.nextInt();
     System.out.println("Podaj drugą liczbę");
     int secondNumber = scanner.nextInt();
-
     System.out.println("Wartości przed:");
     System.out.println(firstNumber + " " + secondNumber);
-
     int thirdNumber = secondNumber;
     secondNumber = firstNumber;
     firstNumber = thirdNumber;
-
-
     System.out.println("Wartości po zamianie:");
     System.out.println(firstNumber + " " + secondNumber);
 }
+}
+ */
 
+/*
+#zad 12 (Akademia kodu 3)
+Porównywanie dwóch stringów
 
+class Kata {
+    public static void main(String[] args) {
+        String name1 = "Domi";
+        String name2 = "Domi";
+        String name3 = new String("Domi");
+        System.out.println(name1 == name2);
+        System.out.println(name1.equals(name2));
+        System.out.println(name1 == name3);
+        System.out.println(name3.equals(name2));
+      StringBuilder stringBuilder = new StringBuilder("Domi");
+        stringBuilder.reverse();
+        System.out.println(stringBuilder);
+        stringBuilder.insert(0, "nap");
+        System.out.println(stringBuilder);
+    }
 
 }
 
+ */
+
+/* Codility demo task
+Write a function:
+
+class Solution { public int solution(int[] A); }
+
+that, given an array A of N integers, returns the smallest positive integer (greater than 0) that does not occur in A.
+
+For example, given A = [1, 3, 6, 4, 1, 2], the function should return 5.
+
+Given A = [1, 2, 3], the function should return 4.
+
+Given A = [−1, −3], the function should return 1.
+
+Write an efficient algorithm for the following assumptions:
+
+N is an integer within the range [1..100,000];
+each element of array A is an integer within the range [−1,000,000..1,000,000].
+
+import java.util.*;
+class Kata {
+    public static void main(String[] args) {
+        System.out.println(solution((new int[]{2, 4, 6, 5, 7, 100})));
+    }
+    public static int solution(int[] A){
+        Set<Integer> set = new HashSet<>();
+        for(int i : A){
+            set.add(i);
+        }
+
+        for (int i = 1; i <= 100 * 100+1; i++){
+            if(!set.contains(i)){
+                return i;
+            }
+        }
+        return 0;
+    }
+}
+ */
+
+/* # Codility task 1
+A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
+
+For example, number 9 has binary representation 1001 and contains a binary gap of length 2. The number 529 has binary representation 1000010001 and contains two binary gaps: one of length 4 and one of length 3. The number 20 has binary representation 10100 and contains one binary gap of length 1. The number 15 has binary representation 1111 and has no binary gaps. The number 32 has binary representation 100000 and has no binary gaps.
+
+Write a function:
+
+class Solution { public int solution(int N); }
+
+that, given a positive integer N, returns the length of its longest binary gap. The function should return 0 if N doesn't contain a binary gap.
+
+For example, given N = 1041 the function should return 5, because N has binary representation 10000010001 and so its longest binary gap is of length 5. Given N = 32 the function should return 0, because N has binary representation '100000' and thus no binary gaps.
+
+Write an efficient algorithm for the following assumptions:
+
+N is an integer within the range [1..2,147,483,647].
 
 
+import java.math.BigInteger;
 
+class kata {
+    public static void main(String[] args) {
+        int solution = solution(4214);
+    }
+    public static int solution(int N){
+        String s = Long.toBinaryString(N);
+        String[] split = s.split("1");
+        int max = 0;
+        for (int i = 0; i < split.length - 1; i++) {
+            int length = split[i].length();
+            if(length > max){
+                max = length;
+            }
+        }
+        return max;
+    }
+    }
+
+ */
+
+/* Codility task 2 Arrays
+A non-empty array A consisting of N integers is given. The array contains an odd number of elements, and each element of the array can be paired with another element that has the same value, except for one element that is left unpaired.
+
+For example, in array A such that:
+
+  A[0] = 9  A[1] = 3  A[2] = 9
+  A[3] = 3  A[4] = 9  A[5] = 7
+  A[6] = 9
+the elements at indexes 0 and 2 have value 9,
+the elements at indexes 1 and 3 have value 3,
+the elements at indexes 4 and 6 have value 9,
+the element at index 5 has value 7 and is unpaired.
+Write a function:
+
+class Solution { public int solution(int[] A); }
+
+that, given an array A consisting of N integers fulfilling the above conditions, returns the value of the unpaired element.
+
+For example, given array A such that:
+
+  A[0] = 9  A[1] = 3  A[2] = 9
+  A[3] = 3  A[4] = 9  A[5] = 7
+  A[6] = 9
+the function should return 7, as explained in the example above.
+
+Write an efficient algorithm for the following assumptions:
+
+N is an odd integer within the range [1..1,000,000];
+each element of array A is an integer within the range [1..1,000,000,000];
+all but one of the values in A occur an even number of times.
+ */
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Kata {
+    public static void main(String[] args) {
+    }
+
+    public static int solution(int [] A){
+        Set<Integer> ints = new HashSet<>();
+
+        for(int a : A){
+            if(!ints.contains(a)){
+                ints.add(a);
+            } else {
+                ints.remove(a);
+            }
+        }
+
+        for(int a: ints){
+            return a;
+        }return 0;
+        }
+    }
 
 
 
