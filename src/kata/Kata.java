@@ -371,8 +371,8 @@ Write an efficient algorithm for the following assumptions:
 N is an odd integer within the range [1..1,000,000];
 each element of array A is an integer within the range [1..1,000,000,000];
 all but one of the values in A occur an even number of times.
- */
 
+/*
 import java.util.HashSet;
 import java.util.Set;
 
@@ -396,6 +396,42 @@ public class Kata {
         }return 0;
         }
     }
+ */
+
+/*
+
+
+ */
+
+import java.util.*;
+
+public class Kata {
+
+    public static List<Integer> list (List<Integer> list) {
+
+        List<Integer> newList = new ArrayList<>();
+        List<Integer> secondList = new ArrayList<>();
+
+        for (int i = 0; i < list.size(); i++){
+            if(i % 2 == 1){
+                newList.add(list.get(i));
+            } else {
+                secondList.add(list.get(i));
+            }
+
+        }
+        newList.addAll(secondList);
+        return newList;
+    }
+    public static void main(String[] args) {
+      List<Integer> ints = new LinkedList<>();
+        Collections.addAll(ints, 2, 6, 9, 3, 1, 0 ,5);
+        System.out.println(list(ints));
+        //initialize an immutable list from array using asList method
+
+
+    }
+}
 
 
 
@@ -404,11 +440,101 @@ public class Kata {
 
 
 
+/*
+package ZadaniaNaRozmowe;
+
+import java.util.List;
+
+public class NewResult {
+    public static void main(String[] args) {
+        List<Integer> newList = List.of(4, 3, 7, 8, 1, 2);
+
+        convertList(newList);
+    }
+    public static int convertList(List<Integer> numbers){ //metoda typu int o nazwie convertList,jako parametr przyjmuje Listę numbers
+        int result = numbers.get(0); // result równa się pierwszej liczbie z listy (4)
+        for(int i = 1; i < numbers.size(); i = i+2){ //pętla, i zaczyna od 1, iteruje do wielkości listy, i przeskakuje co dwa indeksy
+            if(i == numbers.size()-1){ //jeżeli i jest równe liczbie indeksów listy minus jeden
+                result = result + numbers.get(i); //przypisz do zmiennej result: result + aktualną liczbę o indeksie i
+            } else { // lub
+                result = result + numbers.get(i) * numbers.get(i + 1);
+                //przypisz do zmiennej result: aktualną liczbę o indeksie i i pomnóż ją przez liczbę o następnym indeksie
+            }
+        }
+        System.out.println(result);
+        return result;
+    }
+
+}
+
+package ZadaniaNaRozmowe;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Zad11 {
+    public static void main(String[] args) {
+        List<Integer> numbers = List.of(2, 6, 9, 3, 1, 0, 5);
+        convertList(numbers);
+
+        int x = 22;
+        System.out.println(x - x / 2 * 2);
+    }
+    public static List<Integer> convertList(List<Integer> numbers) {
+        ArrayList<Integer> newList = new ArrayList<>();
+        ArrayList<Integer> newList2 = new ArrayList<>();
+        for(int i = 0; i < numbers.size(); i++){
+            if(i % 2 != 0){
+               newList.add(numbers.get(i));
+            } else {
+                newList2.add(numbers.get(i));
+            }
+        }
+        newList.addAll(newList2);
+        System.out.println(newList);
+        return newList;
+    }
+}
+/*
+
+import java.util.*;
+import java.util.stream.Stream;
+public class Zad1{
+   public static List<Integer> convertList(List<Integer> numbers){
+        List<Integer> newList = new LinkedList<>();
+        List<Integer> newList2 = new LinkedList<>();
+       for (int j = 0; j < numbers.size(); j++) {
+           if(j % 2 != 0){
+               newList2.add(0, numbers.get(j));
+               Collections.reverse(newList2);
+           }}
+        for (int i = 0; i < numbers.size(); i++) {
+            if(i % 2 == 0){
+                newList.add(0, numbers.get(i));
+            }
+            System.out.println(numbers.get(i));
+            Collections.reverse(newList);
+        }
+       List<Integer> newList3 = Stream.concat(newList2.stream(), newList.stream()).toList();
+        return newList3;
+    }
+    public static void main(String[] args) {
+        List<Integer> nums = new LinkedList<>();
+        Collections.addAll(nums, 2, 6, 9, 3, 1, 0, 5);
+        System.out.println(Zad1.convertList(nums));
+    }
+}
+
+
+
+ */
 
 
 
 
-
+// [2, 6, 9, 3, 1, 0, 5]
+// [6, 3, 0, 2, 9, 1, 5]
+ */
 
 
 

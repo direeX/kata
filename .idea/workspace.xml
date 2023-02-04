@@ -37,7 +37,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.kata">
+  <component name="RunManager" selected="Application.Kata">
     <configuration name="Kata" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="kata.Kata" />
       <module name="kata" />
@@ -79,8 +79,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.kata" />
         <item itemvalue="Application.Kata" />
+        <item itemvalue="Application.kata" />
         <item itemvalue="Application.Katar" />
       </list>
     </recent_temporary>
@@ -101,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675410533748</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="kata">
+      <created>1675434363033</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675434363033</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
