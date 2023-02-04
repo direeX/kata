@@ -403,6 +403,7 @@ public class Kata {
 
  */
 
+/*
 import java.util.*;
 
 public class Kata {
@@ -432,8 +433,7 @@ public class Kata {
 
     }
 }
-
-
+*/
 
 
 
@@ -441,11 +441,12 @@ public class Kata {
 
 
 /*
+
 package ZadaniaNaRozmowe;
 
 import java.util.List;
 
-public class NewResult {
+public class Kata {
     public static void main(String[] args) {
         List<Integer> newList = List.of(4, 3, 7, 8, 1, 2);
 
@@ -466,19 +467,19 @@ public class NewResult {
     }
 
 }
-
-package ZadaniaNaRozmowe;
-
+*/
+//System.out.println(x - x / 2 * 2); zamiennik modulo
+/*
 import java.util.ArrayList;
 import java.util.List;
 
-public class Zad11 {
+public class Kata {
     public static void main(String[] args) {
         List<Integer> numbers = List.of(2, 6, 9, 3, 1, 0, 5);
         convertList(numbers);
 
         int x = 22;
-        System.out.println(x - x / 2 * 2);
+
     }
     public static List<Integer> convertList(List<Integer> numbers) {
         ArrayList<Integer> newList = new ArrayList<>();
@@ -495,6 +496,9 @@ public class Zad11 {
         return newList;
     }
 }
+
+*/
+
 /*
 
 import java.util.*;
@@ -528,22 +532,70 @@ public class Zad1{
 
 
  */
-
-
-
-
 // [2, 6, 9, 3, 1, 0, 5]
 // [6, 3, 0, 2, 9, 1, 5]
+
+
+
+
+
+/*
+#zad fibonacci
+ */
+//
+//class Kata {
+//    public static int fib(int n){
+//        if(n <= 1)return n;
+//        System.out.println(n);
+//        return fib(n - 1) + fib(n - 2);
+//
+//
+//    }
+//    public static void main(String[] args) {
+//
+//        System.out.println(fib(6));
+//    }
+//}
+
+/*
+fib drugie podejście
+
+
+class Kata {
+    static int fib(int n){
+        int a = 0, b = 1, c;
+
+        if(n == 0) {
+            return a;
+        }
+        for (int i =2; i <= n; i++){
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        return b;
+    }
+    public static void main(String[] args) {
+
+        System.out.println(fib(9));
+    }
+}
+
+*/
+/*
+Question 1 : How to reverse a String in java? Can you write a program without using any java inbuilt methods?
  */
 
-
-
-
-
-
-
-
-
+public class Kata {
+    public static String reverseString(String name){
+        StringBuffer stringBuffer = new StringBuffer(name);
+     return stringBuffer.reverse().toString();
+    }
+    public static void main(String[] args) {
+        String name = "Dominik";
+        System.out.println(reverseString(name));
+    }
+}
 
 
 
