@@ -582,24 +582,92 @@ class Kata {
 }
 
 */
-/*
+/* Java2Blog.com
 Question 1 : How to reverse a String in java? Can you write a program without using any java inbuilt methods?
- */
 
+/*
 public class Kata {
+//    #1 poprzez StringBuffera i reverse i toString
     public static String reverseString(String name){
-        StringBuffer stringBuffer = new StringBuffer(name);
+        StringBuilder stringBuffer = new StringBuilder(name);
      return stringBuffer.reverse().toString();
     }
+
+//    #2 Poprzez for
+     static String appendString(String name){
+          String reverse = "";
+         for (int i = name.length() - 1; i >= 0 ; i--) {
+             reverse = reverse + name.charAt(i);
+
+         }
+         return reverse;
+     }
+
     public static void main(String[] args) {
         String name = "Dominik";
         System.out.println(reverseString(name));
+
+        System.out.println(appendString("Patrycja"));
     }
 }
 
+ */
+
+/*
+Question 2 : Write a java program to check if two Strings are anagram in java?
+Solution: Two string are anagrams if they have same characters but in different order. For example: Angel and Angle are anagrams
+There are few ways to check if Strings are anagrams. Some of them are:
+
+Using String methods
+Using array.sort
+
+#1using loop
+class Kata {
+    static boolean isAnagram(String name1, String name2){
+        if(name1.length() != name2.length()) return false;
+
+        for (int i = 0; i < name1.length(); i++) {
+            char c = name1.charAt(i);
+            System.out.println("c " +c);
+            int index = name2.indexOf(c);
+            System.out.println("index " + index);
+
+            if(index != -1){
+                name2 = name2.substring(0, index) + name2.substring(index + 1, name2.length());
+            }
+                else return false;
 
 
+        }
+        return name2.isEmpty();
 
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println(isAnagram("Dominik", "kinimoD"));
+    }
+}
+ */
+
+import java.util.Arrays;
+
+/*
+#2 using Arrays.sort()
+
+ */
+class Kata {
+    static boolean isAnagram(String word, String anagram){
+        String sortedWord = sortChars(word);
+        String sortedAnagram = sortChars(anagram);
+        return sortedWord.equals(sortedAnagram);
+    }
+    static String sortChars(String word){
+        char[] wordArr = word.toLowerCase().toCharArray();
+        Arrays.sort(wordArr);
+        return String.valueOf(wordArr);
+    }
+}
 
 
 
