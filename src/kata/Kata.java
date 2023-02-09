@@ -650,12 +650,10 @@ class Kata {
 }
  */
 
-import java.util.Arrays;
-
 /*
 #2 using Arrays.sort()
 
- */
+
 class Kata {
     static boolean isAnagram(String word, String anagram){
         String sortedWord = sortChars(word);
@@ -668,14 +666,302 @@ class Kata {
         return String.valueOf(wordArr);
     }
 }
+ */
+
+/* ======================================================
+# zad 3
+How to check if String has all unique characters in java
+
+
+class Kata {
+    static boolean hasUniqueChars (String word){
+        HashSet<Character> hashSet = new HashSet<Character>();
+        for (int i = 0; i < word.length() ; i++) {
+            char c = word.charAt(i);
+            if(!hashSet.add(c))
+                return false;
+        }
+        return true;
+    }
+
+    public static boolean hasAllUniqueChars (String word) {
+
+        for(int index=0;index < word.length(); index ++)   {
+
+            char c =word.charAt(index);
+            if(word.indexOf(c)!=word.lastIndexOf(c))
+                return false;
+        }
+
+        return true;
+    }
+}
+ */
+
+/*=====================================
+# zad
+Java Program to check if one String is rotation of another.
+
+
+class Kata {
+    public static void main(String[] args) {
+        System.out.println(isRotation("abc", "cba"));
+    }
+    static boolean isRotation(String str, String rotation){
+        String str2 = str + str;
+        System.out.println(str2);
+        if(str2.contains(rotation)){
+            return true;
+        }
+        return false;
+    }
+}
+*/
+
+/*==============================================================
+# zad 10
+Java Program to Find Smallest and Largest Element in an Array
 
 
 
+class Kata{
+    public static void main(String[] args) {
+        int[] arr = new int[] {12,56,76,89,100,343,21,234};
+        findLargestSmallestNumbers(arr);
+    }
+    static void findLargestSmallestNumbers(int[] arr){
+        int smallest = arr[0]; //przypisz pierwszy element tablicy do smallest i largest
+        int largest = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            if(arr[i] > largest) // jeżeli element od i jest większy od largest
+                largest = arr[i]; // przypisz do largest aktualny element tablicy
+            else if(arr[i] < smallest) // jezeli element jest mniejszy od smallest
+                smallest= arr[i]; //przypisz do smallest element tablicy
+        }
+        System.out.println("Smallest Number is : " + smallest);
+        System.out.println("Largest Number is : " + largest);
+    }
+}
+ */
+/* ====================
+#zad 11
+Java program to find missing number in an array:
+class Kata {
+    static int missingNumber(int[] arr){
+        int n = arr.length+1; //n wynosi długość tablicy + 1 (5)
+        int sum = n*(n+1)/2;  // sum wynosi n * n+1 / 2 ;; 5 * (5+1) / 2 = (15)
+        int restSum = 0; // restSum wynosi 0, tymczasowa zmienna
+        for (int i = 0; i < arr.length; i++) { // pętla for
+            restSum+=arr[i]; // resSum dodaje do siebie siebie i kolejną liczbę z tablicy o i indeksie
+        }
+        int missingNumber = sum - restSum; // brakująca liczba to wynik odejmowania sumy z tablicy
+        return missingNumber;
+
+    }
+    public static void main(String[] args) {
+        System.out.println(missingNumber(new int[] {1, 2, 3, 5}));
+    }
+}
+ */
 
 
 
+/*
+# zad fibonacci
+
+class Kata{
+    static int fib(int number){
+        int firstNumber = 0;
+        int secondNumber = 1;
+        int thirdNumber = 0;
+        for (int i = 2; i<number; i++){
+            thirdNumber = firstNumber + secondNumber;
+            firstNumber = secondNumber;
+            secondNumber = thirdNumber;
+        }
+        return thirdNumber;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(fib(10));
+    }
+}
+ */
+/*
+import java.util.HashMap;
+import java.util.Map;
 
 
+#zad Find Frequency of each element in an Array using HashMap
 
 
+class Kata{
+    static void freqCounter(int arr[]){
+        HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
+        for (int i = 0; i < arr.length; i++) {
+            if ((hm.containsKey(arr[i]))){
+                hm.put(arr[i], hm.get(arr[i]) + 1);
+            } else {
+                hm.put(arr[i], 1);
+            }
+        }
+        for(Map.Entry entry:hm.entrySet()){
+            System.out.println("Element | Frequency" );
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
+    }
+    public static void main(String[] args) {
+        int[] arr = {1,4,5,9,7,7,1,4,4,7,7};
+        freqCounter(arr);
+    }
+}
+ */
+
+/*
+#zad Znajdz drugą największa liczbę w tablicy:
+
+class Kata {
+
+
+    public static void main(String[] args) {
+        int[] arr1={7,5,6};
+        int secondHighest=findSecondLargestNumberInTheArray(arr1);
+        System.out.println("Second largest element in the array : "+ secondHighest);
+    }
+
+    private static int findSecondLargestNumberInTheArray(int[] array) {
+        int highest = Integer.MIN_VALUE; // zainicjuj namniejszą wartość
+        int secondHighest = Integer.MIN_VALUE; // zainicjuj namniejszą wartość
+
+        for (int i = 0; i < array.length; i++){
+            System.out.println("i wynosi: " + i);
+            if(array[i] > highest){
+                secondHighest = highest; // przydziel druga największą wartość do największej wartości
+                highest = array[i]; // przydziel największy do aktualnego elementu pętli
+            } else if(array[i] > secondHighest && array[i]!=highest)
+                secondHighest = array[i];
+        }
+        return secondHighest;
+    }
+
+}
+ */
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+/*
+#zad napisz bubble sorting program
+
+import java.util.Random;
+
+public class Kata {
+    public static void main(String[] args) {
+       extracted();
+    }
+
+    private static void extracted() {
+        int[] numbers = getInts();
+
+        //Sorting algorithm here
+        boolean swappedSomething = true;
+
+        while (swappedSomething) {
+            swappedSomething = false;
+
+            for (int i = 0; i < numbers.length - 1; i++) {
+                if (numbers[i] > numbers[i + 1]) {
+                    swappedSomething = true;
+                    int temp = numbers[i];
+                    numbers[i] = numbers[i + 1];
+                    numbers[i + 1] = temp;
+                }
+            }
+        }
+
+
+        System.out.println("\nAfter:");
+        printArray(numbers);
+    }
+
+    private static int[] getInts() {
+        Random rand = new Random();
+        int[] numbers = new int[10];
+
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = rand.nextInt(1000000);
+        }
+
+        System.out.println("Before:");
+        printArray(numbers);
+        return numbers;
+    }
+
+    private static void printArray(int[] numbers) {
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+    }
+}
+
+
+ */
+/*
+
+#zad napisz program który wyświetli parzyste liczby od 1 do 100 rosnąco oraz malejąco
+
+
+class Kata{
+    public static void main(String[] args) {
+        extracted();
+        desc();
+
+    }
+    private static void desc()
+    {
+        for (int i = 100; i > 1 ; i--) {
+            if(i%2 == 0){
+                System.out.println(i);
+            }
+
+        }
+    }
+    private static void extracted() {
+        for (int i = 1; i<=100; i++){
+            if(i%2 == 0){
+                System.out.println(i);
+            }
+        }
+    }
+}
+ */
+
+
+/*
+#zad britenet 1
+ */
+
+class Kata{
+    public static void main(String[] args) {
+        List<Integer> ints = List.of(2,6,9,3,1,0,5);
+        numbers(ints);
+    }
+
+    static List<Integer> numbers(List<Integer> list){
+        ArrayList<Integer> oddArrayList = new ArrayList<Integer>();
+        ArrayList<Integer> evenArrayList2 = new ArrayList<Integer>();
+
+        for (int i = 0; i<list.size(); i++){
+            if(i % 2 != 0 ){
+                oddArrayList.add(list.get(i));
+            } else evenArrayList2.add(list.get(i));
+        }
+        oddArrayList.addAll(evenArrayList2);
+        System.out.println(oddArrayList);
+
+        return oddArrayList;
+    }
+}
 
