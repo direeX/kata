@@ -850,7 +850,7 @@ class Kata {
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+
 
 /*
 #zad napisz bubble sorting program
@@ -941,7 +941,7 @@ class Kata{
 
 /*
 #zad britenet 1
- */
+
 
 class Kata{
     public static void main(String[] args) {
@@ -964,4 +964,154 @@ class Kata{
         return oddArrayList;
     }
 }
+ */
+
+/* #zad2 britenet 2
+// */
+//import java.util.List;
+//import java.io.*;
+//class Kata {
+//    public static void main(String[] args) {
+//        List<Integer> newList = List.of(4, 3, 7, 8, 1); // zadeklarowanie listy
+//        List<Integer> ints = List.of(2, 6, 9, 3, 1, 0, 5);
+
+//        System.out.println(addAndMultiply6(newList));
+//        addAndMultiply3(ints);
+
+//
+//    }
+////
+////        addAndMultiply3(newList); // wywołanie i wyświetlenie metody
+//    }
+////
+//    static int addAndMultiply(List<Integer> list) { // zadeklarowanie metody
+//        int result = list.get(0);  // przypisanie pierwszego elementu listy do zmiennej result
+//        for (int i = 1; i < list.size(); i = i + 2) { // pętla for, zaczyna iterować od drugiego elementu, do wielkości listy, przeskakuj co drugi element
+//            if (i == list.size() - 1) { // jeżeli i równa się długości listy pomniejszonej o 1
+//                result += list.get(i); // result wynosi result + aktualny element listy i
+//            } else { // lub
+//                result += list.get(i) * list.get(i + 1); // result wynosi result + element listy pomnożony przez nastepny element listy
+//            }
+//        }
+//        return result; // zwróc result
+//    }
+
+//    public static int addAndMultiply5(List<Integer> list) {
+//        int result = list.get(0);
+//        for (int i = 1; i < list.size(); i += 2) {
+//            if (i == list.size() - 1) {
+//                result = result + list.get(i);
+//                System.out.println("Dodaję ostatni element do result");
+//            } else {
+//                System.out.println("result " + result);
+//                result = result + list.get(i) * list.get(i + 1);
+//                System.out.println("Mnożę result");
+//                System.out.println("result" + result);
+//                System.out.println("i " + list.get(i));
+//            }
+//        }
+//        return result;
+//    }
+
+//    public static int addAndMultiply6(List<Integer> list){
+//        int result = list.get(0);
+//        for (int i = 1; i < list.size(); i+=2) {
+//            if(i == list.size() - 1){
+//                result += list.get(i);
+//            } else {
+//                result += list.get(i) * list.get(i + 1);
+//            }
+//        }
+//        return result;
+//    }
+
+
+
+
+
+    /* zadeklarowanie metody
+    przypisanie pierwszego elementu listy do zmiennej result
+    pętla for, zaczyna iterować od drugiego elementu, do wielkości listy, przeskakuj co drugi element
+    jeżeli i równa się długości listy pomniejszonej o 1
+    result wynosi result + aktualny element listy i
+     lub
+    result wynosi result + element listy pomnożony przez nastepny element listy
+     zwróc result
+    */
+
+
+
+//
+//    public static List<Integer> addAndMultiply3 (List<Integer> list){
+//        List<Integer> oddList = new ArrayList<Integer>();
+//        List<Integer> evenList = new ArrayList<Integer>();
+//        for (int i = 0; i < list.size(); i++){
+//            if(i % 2 != 0){
+//               oddList.add(list.get(i));
+//            } else{
+//                evenList.add(list.get(i));
+//            }
+//        }
+//      oddList.addAll(evenList);
+//        System.out.println(oddList);
+//        return oddList;
+//    }
+
+//zad posortuj tablicę intów
+public class Kata{
+    public static void main(String[] args) {
+        int[] numbers = {4, 6, 2, 3, 7, 8, 1, 9, 0};
+
+        int min;
+        for (int i = 0; i < numbers.length; i++) {
+            min = numbers[i];
+            System.out.println(" pętla i");
+            for (int j = i + 1; j < numbers.length; j++) {
+                if(numbers[j] < min){
+                    min = numbers[j];
+                    numbers[j] = numbers[i];
+                    numbers[i] = min;
+                    System.out.println("pętla jjjj");
+                }
+            }
+        }
+        for(int number : numbers) {
+            System.out.println(number + " ");
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
