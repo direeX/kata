@@ -1056,34 +1056,79 @@ class Kata{
 //        System.out.println(oddList);
 //        return oddList;
 //    }
+// ========================================================================
 
-//zad posortuj tablicę intów
+// # zad posortuj tablicę intów\
+/*
 public class Kata{
     public static void main(String[] args) {
         int[] numbers = {4, 6, 2, 3, 7, 8, 1, 9, 0};
+        printArray(numbers);
+        System.out.println("");
+//        extracted1(numbers);
+        sortArray(numbers);
+        printArray(numbers);
+    }
 
+    private static void extracted1(int[] numbers) {
         int min;
         for (int i = 0; i < numbers.length; i++) {
             min = numbers[i];
-            System.out.println(" pętla i");
             for (int j = i + 1; j < numbers.length; j++) {
                 if(numbers[j] < min){
                     min = numbers[j];
                     numbers[j] = numbers[i];
                     numbers[i] = min;
-                    System.out.println("pętla jjjj");
                 }
             }
         }
+    }
+
+    private static void printArray(int[] numbers) {
         for(int number : numbers) {
-            System.out.println(number + " ");
+            System.out.print(number + " ");
         }
     }
 
+    private static int[] sortArray(int[] array){
+        int min;
+        for (int i = 0; i < array.length; i++) {
+            min = array[i];
+            for (int j = i + 1; j < array.length; j++) {
+                if(array[j] < min){
+                    min = array[j];
+                    array[j] = array[i];
+                    array[i] = min;
+                }
+
+            }
+        }
+        return array;
+    }
+
 }
+*/
 
+/* #zad napisz program który przesunie wszystkie elementy tablicy o jedno miejsce w lewo.
+class Kata {
+    public static void main(String[] args) {
+        int [] tab = {20, 30, 40};
+        int[] result = new int[3];
+        for (int i = 0; i < tab.length; i++) {
+            if(i == 0){
+                result[result.length - 1] = tab[0];
+            } else {
+                result [i - 1] = tab[i];
+            }
+        }
 
+    }
+}
+ */
 
+/*
+
+ */
 
 
 
