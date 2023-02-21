@@ -848,7 +848,8 @@ class Kata {
 }
  */
 
-import java.sql.Array;
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.*;
 
@@ -1155,9 +1156,25 @@ class Kata {
  */
 
 /*
-# zad
+#zad Napisz program który wyświetli sumę, produkt(mnożenie poszczególnych elementów), oraz średnią
  */
 
+class Kata {
+    public static void main(String[] args) {
+        int [] ints = new int[] {1, 2, -3, 5, 7};
+
+        double sum = 0;
+        int product = 1;
+        for (int j : ints) {
+            sum += j;
+            product = product * j;
+        }
+        System.out.println(sum);
+        System.out.println(product);
+       double avg = sum / ints.length;
+        System.out.println(avg);
+    }
+}
 
 
 
