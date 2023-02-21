@@ -848,8 +848,9 @@ class Kata {
 }
  */
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.sql.Array;
+
+//import java.util.*;
 
 
 /*
@@ -1127,9 +1128,35 @@ class Kata {
  */
 
 /*
+#zad stwórz listę unikalnych elementów od użytkownika i posortuj je
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+//import java.util.*;
+class Kata {
+    public static void main(String[] args) {
+        ArrayList<Integer> integers = new ArrayList<>();
+//        int [] arr = new int[]{1, 8, 9, 2, 6, 6, 1, 3, 5, 5};
+
+        System.out.println("Enter 5 integers: ");
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < 5; i++) {
+            int temp = scanner.nextInt();
+            if(!integers.contains(temp))
+                integers.add(temp);
+        }
+        Collections.sort(integers);
+        System.out.println(integers);
+
+
+    }
+}
  */
 
+/*
+# zad
+ */
 
 
 
