@@ -848,8 +848,10 @@ class Kata {
 }
  */
 
-import java.util.ArrayList;
-import java.util.List;
+//import java.util.ArrayList;
+//import java.util.Arrays;
+//import java.util.Collections;
+//import java.util.List;
 
 //import java.util.*;
 
@@ -1157,7 +1159,7 @@ class Kata {
 
 /*
 #zad Napisz program który wyświetli sumę, produkt(mnożenie poszczególnych elementów), oraz średnią
- */
+
 
 class Kata {
     public static void main(String[] args) {
@@ -1175,25 +1177,194 @@ class Kata {
         System.out.println(avg);
     }
 }
+ */
+
+/*
+#zad Napisz program w którym wyliczysz liczbę wystąpień danej liczby
+
+class Kata {
+    public static void main(String[] args) {
+        int[] arr = new int[]{1, 1, 1, 2, 3, 4};
+        int searchElement = 1;
+
+        System.out.println(getNumberOcc(arr, searchElement));
+    }
+    public static int getNumberOcc(int[] numbers, int searchElement){
+        int occ = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if(searchElement == numbers[i])
+                occ++;
+        }
+        return occ;
+    }
+}
+ */
+
+/*
+#zad napisz program który wskaże najmniejszą i największa liczbę w tabeli
 
 
+class Kata{
+    public static void main(String[] args) {
+        int [] numbers = {2,4,6,-3,5};
+        int min = numbers[0];
+        int max = numbers[0];
+
+        for (int i = 0; i < numbers.length; i++) {
+            max = Math.max(numbers[i], max);
+            min = Math.min(numbers[i], min);
+            // lub
+            max = (numbers[i] > max) ? numbers[i] : max;
+            min = (numbers[i] < min) ? numbers[i] : min;
+        }
+        System.out.println("max = " + max + " min = " + min);
+    }
+}
+ */
+
+/*
+#zad1 Java blog
+Java program to reverse a String
+
+class Kata {
+    public static void main(String[] args) {
+        String blogName = "java2blog";
+        StringBuffer sb = new StringBuffer(blogName);
+        System.out.println("Reverse of java2blog is:" + sb.reverse());
+    }
+}
+// lub
+
+public class Kata {
+    public static void main(String[] args) {
+        String blogName = "java2blog";
+        String reverse = "";
+        for (int i = blogName.length() - 1; i >= 0; i--) {
+            reverse = reverse + blogName.charAt(i);
+        }
+        System.out.println("Reverse of java2blog is: " + reverse);
+    }
+}
+ */
 
 
+/*
+#
 
 
+class Kata {
+    public static void main(String[] args) {
+        int[] ints = {5, 3, 65, 1, 0, -1};
+        String [] strings = {"aa", "dsd", "D32d23", "0f23fi2j"};
+        Arrays.sort(ints);
+        Arrays.sort(strings);
+        String [] newStrings = {};
+
+        System.out.println(Arrays.toString(ints));
+        System.out.println(Arrays.toString(strings));
+    }
+}
+ */
+/*
+Sortowanie w ujemnej kolejnośći
+SortArrayExample2.java
+
+public class SortArrayExample2
+{
+public static void main(String[] args)
+{
+//creating an instance of an array
+int[] arr = new int[] {78, 34, 1, 3, 90, 34, -1, -4, 6, 55, 20, -65};
+System.out.println("Array elements after sorting:");
+//sorting logic
+for (int i = 0; i < arr.length; i++)
+{
+for (int j = i + 1; j < arr.length; j++)
+{
+int tmp = 0;
+if (arr[i] > arr[j])
+{
+tmp = arr[i];
+arr[i] = arr[j];
+arr[j] = tmp;
+}
+}
+//prints the sorted element of the array
+System.out.println(arr[i]);
+}
+}
+}
 
 
+class Kata{
+    public static void main(String[] args) {
+        List<Integer> al = Arrays.asList(3, 2, 1, 545, 12);
+
+    miniMaxSum(al);
+    }
+    public static void miniMaxSum(List<Integer> arr) {
+
+        Collections.sort(arr);
+        System.out.println(arr);
 
 
+    }
+}
 
 
+    public static void miniMaxSum(List<Integer> arr) {
+        // Write your code here
+        Collections.sort(arr);
+        int min = 0;
+        for(int i = 0; i < arr.size() - 1; i++){
+            min+= arr.get(i);
+        }
+        int max = 0;
+        for(int i = 1; i < arr.size(); i++){
+            max+= arr.get(i);
+        }
+        System.out.println(min + " " + max);
+    }
+ */
 
+//public class Kata {
+//    public static List<Integer> listConverter(List<Integer> list){
+//        List<Integer> even = new ArrayList<>();
+//        List<Integer> odd = new ArrayList<>();
+//        for (int i = 0; i < list.size(); i++) {
+//            if(i % 2 == 0){
+//                even.add(list.get(i));
+//            } else {
+//                odd.add(list.get(i));
+//            }
+//        }
+//        odd.addAll(even);
+//        System.out.println(odd);
+//        return odd;
+//    }
+//    public static void main(String[] args) {
+//        List<Integer> newList = List.of(2, 6, 9, 3, 1, 0, 5);
+//        listConverter(newList);
+//    }
+//}
 
-
-
-
-
-
+//class Kata {
+//    static int listConverter(List<Integer> list){
+//        int result = list.get(0);
+//        for (int i = 1; i < list.size(); i+=2) {
+//            if(i == list.size() - 1){
+//                result += list.get(i);
+//            } else {
+//                result += list.get(i) * list.get(i + 1);
+//            }
+//        }
+//        return result;
+//    }
+//    public static void main(String[] args) {
+//        List<Integer> newList = List.of(4, 3, 7, 8, 1);
+//        System.out.println(listConverter(newList));
+//    }
+//}
 
 
 
