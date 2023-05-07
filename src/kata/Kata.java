@@ -1365,13 +1365,1479 @@ class Kata{
 //        System.out.println(listConverter(newList));
 //    }
 //}
+//
+//
+//import java.util.ArrayList;
+//import java.util.List;
+//
+//class Kata{
+//    public static void main(String[] args) {
+//        List<Integer> newList = List.of(4, 3, 7, 8, 1);
+//        System.out.println(addAndMultiply(newList));
+//    }
+//    static int addAndMultiply(List<Integer> list) {
+//        int sum = list.get(0);
+//        for (int i = 1; i < list.size(); i+=2) {
+//            if(i == list.size() -1){
+//                sum += list.get(i);
+//            } else {
+//                sum += list.get(i) * list.get(i + 1);
+//            }
+//        }
+//        return sum;
+//    }
+//}
+//class Kata {
+//    public static void main(String[] args) {
+//    int[] arr = {1, 2, 3 ,4 ,5};
+//    int sum = 0;
+//        for (int i = 0; i < arr.length ; i++) {
+//            sum+= arr[i];
+//        }
+//        System.out.println(sum);
+//    }
+//}
+
+
+// # Codility demo:
+//import java.util.Arrays;
+//
+//public class Kata {
+//
+//    public static void main(String[] args) {
+//        int[] arr = {5, 2, 5, 7, 1, 2, 3, 6};
+//        System.out.println(solution(arr));
+//    }
+//    public static int solution(int[] A) {
+//      int smallest = 1;
+//      Arrays.sort(A);
+//        for (int i = 0; i < A.length; i++) {
+//            if(A[i] == smallest){
+//                smallest++;
+//            }
+//        }
+//        return smallest;
+//
+//        }
+//    }
+
+
+ // # codility 1 binary gap
+//
+//class Kata {
+//    public static void main(String[] args) {
+//        int solution = solution(52);
+//        System.out.println(solution);
+//    }
+//
+//        public static int solution(int N){
+//            String s = Long.toBinaryString(N);
+//            int modifier = 0;
+//            if(s.endsWith("0")){
+//                modifier = 1;
+//            }
+//            String[] split = s.split("1");
+//            int max = 0;
+//            for (int i = 0; i < split.length - modifier; i++) {
+//                int length = split[i].length();
+//                if(length > max){
+//                    max = length;
+//                }
+//            }
+//            return max;
+//        }
+//
+//
+//
+//}
+/*
+import java.util.*;
+
+class Kata {
+    public static void main(String[] args) {
+//        List<Integer> ints = new ArrayList<>();
+//        Collections.addAll(ints, 2, 6, 9, 3, 1, 0, 5);
+//        List<Integer> numbers = List.of(2, 6, 9, 3, 1, 0, 5);
+
+        List<Integer> ints = List.of(2, 6, 9, 3, 1, 0, 5);
+        System.out.println(oddEvenList(ints));
+    }
+
+    public static List <Integer> oddEvenList(List <Integer> list) {
+        List <Integer> newList = new ArrayList<>();
+        List <Integer> secondList = new ArrayList<>();
+
+        for (int i = 0; i < list.size(); i++) {
+            if(i%2!=0){
+                newList.add(list.get(i));
+            } else {
+                secondList.add(list.get(i));
+            }
+        }
+         newList.addAll(secondList);
+        return newList;
+    }
+}
+*/
+
+//import java.util.List;
+
+/*
+import java.util.*;
+
+public class Kata {
+
+    public static List<Integer> list (List<Integer> list) {
+
+        List<Integer> newList = new ArrayList<>();
+        List<Integer> secondList = new ArrayList<>();
+
+        for (int i = 0; i < list.size(); i++){
+            if(i % 2 == 1){
+                newList.add(list.get(i));
+            } else {
+                secondList.add(list.get(i));
+            }
+
+        }
+        newList.addAll(secondList);
+        return newList;
+    }
+    public static void main(String[] args) {
+        List<Integer> ints = new LinkedList<>();
+        Collections.addAll(ints, 2, 6, 9, 3, 1, 0 ,5);
+        System.out.println(list(ints));
+        //initialize an immutable list from array using asList method
+
+
+    }
+}
+*/
+/*
+import java.util.*;
+class Kata {
+    public static void main(String[] args) {
+        List<Integer> list = List.of(4,3,7,8,1);
+        System.out.println(addAndMultiply(list));
+
+    }
+    public static int addAndMultiply (List<Integer> list){
+        int result = list.get(0);
+        for (int i = 1; i < list.size(); i+=2) {
+            if(i == list.size() - 1){
+                result += list.get(i);
+            } else {
+                result += list.get(i) * list.get(i + 1);
+            }
+        }
+return result;
+    }
+}
+*/
+/*
+import java.util.*;
+class Kata {
+    public static void main(String[] args) {
+        List<Integer> list = List.of(4,3,7,8,1);
+        System.out.println(addAndMultiply(list));
+    }
+    public static int addAndMultiply(List<Integer> list){
+        int result = list.get(0);
+        for (int i = 1; i < list.size(); i+=2) {
+            if(i == list.size() - 1){
+                result+= list.get(i);
+            } else {
+                result+= list.get(i) * list.get(i + 1);
+            }
+        }
+        return result;
+
+    }
+}
+*/
+/*
+#LISTY
+1. Write a Java program to create a new array list, add some colors (string) and print out the collection. Go to the editor
+
+class Kata {
+    public static void main(String[] args) {
+        List<String> list = List.of("red", "blue", "black");
+        System.out.println(list);
+        for (String color:list){
+            System.out.print(color + " ");
+        }
+    }
+}
+ */
+/*
+2. Write a Java program to iterate through all elements in an array list.
+
+class Kata {
+    public static void main(String[] args) {
+        List<String> list = List.of("aa", "bb", "cc");
+        for(String letters: list){
+            System.out.println(letters);
+        }
+    }
+}
+ */
+/*
+3. Write a Java program to insert an element into the array list at the first position
+
+
+import java.util.*;
+class Kata {
+
+    public static void main(String[] args) {
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(0, 5);
+        System.out.println(list);
+    }
+}
+ */
+/*
+ Write a Java program to retrieve an element (at a specified index) from a given array list.
+
+import java.util.List;
+class Kata{
+    public static void main(String[] args) {
+        List<String> list = List.of("burek", "reksio", "pusia");
+        String name = list.get(2);
+        System.out.println(name);
+
+    }
+}
+ */
+/*
+5. Write a Java program to update specific array element by given element
+
+import java.util.ArrayList;
+import java.util.List;
+class Kata {
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        list.add("nnn");
+        list.add("aaa");
+        list.add("ttt");
+        list.add("aaa");
+        list.set(3, "lll");
+        System.out.println(list);
+    }
+}
+*/
+
+//import java.util.ArrayList;
+
+/*
+6. Write a Java program to remove the third element from a array list.
+
+import java.util.*;
+ class Kata {
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        list.add("nnn");
+        list.add("aaa");
+        list.add("ttt");
+        list.add("aaa");
+        list.remove(2);
+        System.out.println(list);
+    }
+}
+ */
+/*
+7. Write a Java program to search an element in a array list
+
+import java.util.*;
+class Kata{
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        list.add("red");
+        list.add("blue");
+        list.add("green");
+        list.add("yellow");
+        list.add("white");
+        System.out.println(list.contains("yellow"));
+    }
+}
+ */
+ /*
+ 8. Write a Java program to sort a given array list
+
+import java.util.*;
+class Kata {
+    public static void main(String[] args) {
+        List<Integer> list = new ArrayList<>();
+        list.add(123);
+        list.add(212312);
+        list.add(354543);
+        list.add(212);
+        list.add(9);
+        System.out.println(list);
+        Collections.sort(list);
+        System.out.println(list);
+    }
+}
+ */
+/*
+9. Write a Java program to copy one array list into another
+
+
+import java.util.*;
+class Kata{
+    public static void main(String[] args) {
+        List<Integer> list1 = new ArrayList<>();
+        List<Integer> list2 = new ArrayList<>();
+
+        list1.add(2);
+        list1.add(3);
+        list1.add(4);
+
+        list2.add(5);
+        list2.add(6);
+        list2.add(7);
+
+        System.out.println("List 1 " + list1);
+        System.out.println("List 2 " + list2);
+        Collections.copy(list1, list2);
+        System.out.println(list1);
+        System.out.println(list2);
+
+    }
+}
+ */
+/*
+10. Write a Java program to shuffle elements in a array list
+
+
+import java.util.*;
+class Kata{
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        list.add("red");
+        list.add("blue");
+        list.add("green");
+        list.add("yellow");
+        list.add("white");
+        System.out.println(list);
+        Collections.shuffle(list);
+        System.out.println(list);
+    }
+}
+ */
+/*
+11. Write a Java program to reverse elements in a array list
+
+
+import java.util.Collections;
+import java.util.List;
+
+class Kata {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("red");
+        list.add("blue");
+        list.add("green");
+        list.add("yellow");
+        list.add("white");
+        System.out.println(list);
+
+        System.out.println(reverseList(list));
+
+    }
+
+    static ArrayList<String> reverseList (ArrayList<String> list){
+        Collections.reverse(list);
+        return list;
+
+    }
+}
+ */
+ /*
+ 12. Write a Java program to extract a portion of a array list
+
+import java.util.List;
+class Kata{
+    public static void main(String[] args) {
+        List<String> list_Strings = new ArrayList<String>();
+        list_Strings.add("Red");
+        list_Strings.add("Green");
+        list_Strings.add("Orange");
+        list_Strings.add("White");
+        list_Strings.add("Black");
+        System.out.println("Original list: " + list_Strings);
+//        List<String> sub_List = list_Strings.subList(1, 3);
+//        System.out.println("List of first three elements: " + sub_List);
+        System.out.println("ddd" + listExtracter(list_Strings));
+    }
+
+    public static List<String> listExtracter (List<String> list){
+        return list.subList(1, 3);
+    }
+        }
+          */
+  /*
+  13. Write a Java program to compare two array lists.
+
+import java.util.ArrayList;
+import java.util.*;
+class Kata {
+    public static void main(String[] args) {
+        ArrayList<String> c1= new ArrayList<>();
+        c1.add("Red");
+        c1.add("Green");
+        c1.add("Black");
+        c1.add("White");
+        c1.add("Pink");
+
+        ArrayList<String> c2= new ArrayList<>();
+        c2.add("Red");
+        c2.add("Green");
+        c2.add("Black");
+        c2.add("Pink");
+
+        ArrayList<String> c3 = new ArrayList<>();
+        for (String e : c1)
+            c3.add(c2.contains(e) ? "Yes" : "No");
+        System.out.println(c3);
+
+        System.out.println("metoda: " + listComparator(c1, c2));
+    }
+
+    public static ArrayList<String> listComparator (ArrayList <String> list1, ArrayList<String> list2){
+        ArrayList<String> list3 = new ArrayList<>();
+        for (String e : list1){
+            list3.add(list2.contains(e) ? "Yes" : "No");
+
+        }
+        return list3;
+    }
+}
+  */
+   /*
+   14. Write a Java program of swap two elements in an array list
+
+
+import java.util.ArrayList;
+import java.util.Collections;
+public class Kata {
+    public static void main(String[] args) {
+        ArrayList<String> c1= new ArrayList<String>();
+        c1.add("Red");
+        c1.add("Green");
+        c1.add("Black");
+        c1.add("White");
+        c1.add("Pink");
+
+        System.out.println("Array list before Swap:");
+        System.out.println(c1);
+//        for(String a: c1){
+//            System.out.println(a);
+//        }
+        //Swapping 1st(index 0) element with the 3rd(index 2) element
+//        Collections.swap(c1, 0, 2);
+//        System.out.println("Array list after swap:");
+//        System.out.println(c1);
+//        for(String b: c1){
+//            System.out.println(b);
+//        }
+        System.out.println("After method swap: ");
+        swapList(c1);
+    }
+
+    public static void swapList (ArrayList<String> list){
+        Collections.swap(list, 0, 2);
+        System.out.println(list);
+
+    }
+}
+  */
+    /*
+    15. Write a Java program to join two array lists
+
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Kata {
+    public static void main(String[] args) {
+        ArrayList<String> c1= new ArrayList<String>();
+        c1.add("Red");
+        c1.add("Green");
+        c1.add("Black");
+        c1.add("White");
+        c1.add("Pink");
+        System.out.println("List of first array: " + c1);
+        ArrayList<String> c2= new ArrayList<String>();
+        c2.add("Red");
+        c2.add("Green");
+        c2.add("Black");
+        c2.add("Pink");
+        System.out.println("List of second array: " + c2);
+
+        // Let join above two list
+        ArrayList<String> a = new ArrayList<String>();
+        a.addAll(c1);
+        a.addAll(c2);
+        System.out.println("New array: " + a);
+
+        System.out.println("method: " + joinLists(c1, c2));
+
+    }
+    public static List<String> joinLists (List<String> list1, List<String> list2){
+        ArrayList<String> newList = new ArrayList<>();
+        newList.addAll(list1);
+        newList.addAll(list2);
+        return newList;
+    }
+}
+*/
+
+/*
+16. Write a Java program to clone an array list to another array list
+
+
+import java.util.ArrayList;
+import java.util.Collections;
+public class Kata {
+    public static void main(String[] args) {
+        ArrayList<String> c1= new ArrayList<String>();
+        c1.add("Red");
+        c1.add("Green");
+        c1.add("Black");
+        c1.add("White");
+        c1.add("Pink");
+        System.out.println("Original array list: " + c1);
+//        ArrayList<String> newc1 = (ArrayList<String>)c1.clone();
+//        System.out.println("Cloned array list: " + newc1);
+        System.out.println("Cloned array list: " + cloneList(c1));
+    }
+    public static ArrayList<String> cloneList (ArrayList<String> list){
+        return (ArrayList<String>) list.clone();
+    }
+}
+ */
+
+/*
+17. Write a Java program to empty an array list.
+
+import java.util.ArrayList;
+import java.util.Collections;
+public class Kata {
+    public static void main(String[] args) {
+        ArrayList<String> c1= new ArrayList<String>();
+        c1.add("Red");
+        c1.add("Green");
+        c1.add("Black");
+        c1.add("White");
+        c1.add("Pink");
+        System.out.println("Original array list: " + c1);
+//        c1.removeAll(c1);
+        System.out.println("Array list after remove all elements "+c1);
+
+        listCleaner(c1);
+        System.out.println("method " + c1);
+    }
+    public static void listCleaner(ArrayList<String> list){
+        list.removeAll(list);
+    }
+}
+
+ */
+
+/*
+18. Write a Java program to test whether an array list is empty or not
+
+import java.util.ArrayList;
+import java.util.Collections;
+public class Kata {
+    public static void main(String[] args) {
+        ArrayList<String> c1= new ArrayList<String>();
+        c1.add("Red");
+        c1.add("Green");
+        c1.add("Black");
+        c1.add("White");
+        c1.add("Pink");
+        System.out.println("Original array list: " + c1);
+        System.out.println("Checking the above array list is empty or not! "+c1.isEmpty());
+        c1.removeAll(c1);
+        System.out.println("Array list after remove all elements "+c1);
+        System.out.println("Checking the above array list is empty or not! "+c1.isEmpty());
+
+        System.out.println("method: " + isEmptyList(c1));
+    }
+
+    public static boolean isEmptyList(ArrayList<String> list){
+        return list.isEmpty();
+    }
+}
+
+ */
+
+/*
+19. Write a Java program for trimming the capacity of an array list.
+
+import java.util.ArrayList;
+import java.util.Collections;
+public class Kata {
+    public static void main(String[] args) {
+        ArrayList<String> c1= new ArrayList<String>();
+        c1.add("Red");
+        c1.add("Green");
+        c1.add("Black");
+        c1.add("White");
+        c1.add("Pink");
+        System.out.println("Original array list: " + c1);
+        System.out.println("Let trim to size the above array: ");
+//        c1.trimToSize();
+        trimList(c1);
+        System.out.println(c1);
+    }
+
+    public static void trimList(ArrayList<String> list){
+        list.trimToSize();
+    }
+}
+
+ */
+
+/*
+20. Write a Java program to increase an array list size.
+
+import java.util.ArrayList;
+import java.util.Collections;
+public class Kata {
+    public static void main(String[] args) {
+        ArrayList<String> c1= new ArrayList<String>(3);
+        c1.add("Red");
+        c1.add("Green");
+        c1.add("Black");
+        System.out.println("Original array list: " + c1);
+        //Increase capacity to 6
+//        c1.ensureCapacity(6);
+        increaseListSizeTo6(c1);
+        c1.add("White");
+        c1.add("Pink");
+        c1.add("Yellow");
+        System.out.println("New array list: " + c1);
+    }
+    public static void increaseListSizeTo6(ArrayList<String> list){
+        list.ensureCapacity(6);
+    }
+}
+ */
+/*
+21. Write a Java program to replace the second element of an ArrayList with the specified element
+
+import java.util.ArrayList;
+public class Kata {
+    public static void main(String[] args){
+        ArrayList<String>  color = new ArrayList<String>();
+
+        color.add("Red");
+        color.add("Green");
+
+        System.out.println("Original array list: " + color);
+        replaceSecondElement(color, "purple");
+        System.out.println(color);
+//        String new_color = "White";
+//        color.set(1,new_color);
+
+//        int num=color.size();
+//        System.out.println("Replace second element with 'White'.");
+//        for(int i=0;i<num;i++)
+//            System.out.println(color.get(i));
+    }
+    public static void replaceSecondElement(ArrayList<String> list, String newColor){
+        list.set(1, newColor);
+    }
+}
+ */
+
+
+/*
+22. Write a Java program to print all the elements of an ArrayList using the elements' position
+import java.util.ArrayList;
+public class Kata {
+    public static void main(String[] args) {
+        ArrayList <String> c1 = new ArrayList <String> ();
+        c1.add("Red");
+        c1.add("Green");
+        c1.add("Black");
+        c1.add("White");
+        c1.add("Pink");
+        System.out.println("\nOriginal array list: " + c1);
+        System.out.println("\nPrint using index of an element: ");
+        listPrinter(c1);
+//        int no_of_elements = c1.size();
+//        for (int index = 0; index < no_of_elements; index++)
+//            System.out.println(c1.get(index));
+    }
+
+    public static void listPrinter(ArrayList<String> list){
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+
+
+        }
+    }
+}
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class ArrayListIteratorRemoveExample {
+    public static void main(String[] args) {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(13);
+        numbers.add(18);
+        numbers.add(25);
+        numbers.add(40);
+
+        Iterator<Integer> numbersIterator = numbers.iterator();
+        while (numbersIterator.hasNext()) {
+            Integer num = numbersIterator.next();
+            if(num % 2 != 0) {
+                numbersIterator.remove();
+            }
+        }
+
+        System.out.println(numbers);
+    }
+}
+*/
+
+/*
+LINKED LIST
+1. Write a Java program to append the specified element to the end of a linked list.
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Kata {
+    public static void main(String[] args) {
+        // create an empty linked list
+        LinkedList<String> l_list = new LinkedList<String>();
+        // use add() method to add values in the linked list
+        l_list.add("Red");
+        l_list.add("Green");
+        l_list.add("Black");
+        l_list.add("White");
+        l_list.add("Pink");
+        l_list.add("Yellow");
+
+        // print the list
+        System.out.println("The linked list: " + l_list);
+        appendToList(l_list, "blue");
+        System.out.println("The linked list: " + l_list);
+    }
+    public static void appendToList(List<String> list, String element) {
+        list.add(element);
+    }
+}
+
+ */
+
+/*
+2. Write a Java program to iterate through all elements in a linked list.
+
+
+import java.util.LinkedList;
+public class Kata {
+    public static void main(String[] args) {
+        // create an empty linked list
+        LinkedList<String> l_list = new LinkedList<String>();
+        // use add() method to add values in the linked list
+        l_list.add("Red");
+        l_list.add("Green");
+        l_list.add("Black");
+        l_list.add("White");
+        l_list.add("Pink");
+        // Print the linked list
+        for (String element : l_list) {
+            System.out.println(element);
+        }
+    }
+}
 
 
 
+/*
+3. Write a Java program to iterate through all elements in a linked list starting at the specified position
+
+import java.util.LinkedList;
+import java.util.Iterator;
+public class Kata {
+    public static void main(String[] args) {
+        // create an empty linked list
+        LinkedList<String> l_list = new LinkedList<String>();
+        // use add() method to add values in the linked list
+        l_list.add("Red");
+        l_list.add("Green");
+        l_list.add("Black");
+        l_list.add("White");
+        l_list.add("Pink");
+// set Iterator at specified index
+        Iterator p = l_list.listIterator(1);
+
+        // print list from second position
+        while (p.hasNext()) {
+            System.out.println(p.next());
+        }
+    }
+    static void iterateList(LinkedList<String> list){
+        Iterator p = list.listIterator(1);
+        while(p.hasNext()){
+            System.out.println(p.next());
+        }
+    }
+}
+ */
+
+/*
+4. Write a Java program to iterate a linked list in reverse order
 
 
+import java.util.LinkedList;
+import java.util.Iterator;
+public class Kata {
+    public static void main(String[] args) {
+        // create an empty linked list
+        LinkedList<String> l_list = new LinkedList<String>();
+        // use add() method to add values in the linked list
+        l_list.add("Red");
+        l_list.add("Green");
+        l_list.add("Black");
+        l_list.add("Pink");
+        l_list.add("orange");
+
+        // print original list
+        System.out.println("Original linked list:" + l_list);
+
+        Iterator it = l_list.descendingIterator();
+
+        // Print list elements in reverse order
+        System.out.println("Elements in Reverse Order:");
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
+        listPrinter(l_list);
+    }
+
+    static void listPrinter(LinkedList<String> list){
+        Iterator it = list.descendingIterator();
+        System.out.println("Elements in reverse order:");
+
+        while(it.hasNext()){
+            System.out.println(it.next());
+        }
+        }
+    }
 
 
+ */
+/*
+5. Write a Java program to insert the specified element at the specified position in the linked list
+
+import java.util.LinkedList;
+public class Kata {
+    public static void main(String[] args) {
+        // create an empty linked list
+        LinkedList <String> l_list = new LinkedList <String> ();
+        // use add() method to add values in the linked list
+        l_list.add("Red");
+        l_list.add("Green");
+        l_list.add("Black");
+        l_list.add("White");
+        l_list.add("Pink");
+        System.out.println("Original linked list: ");
+        System.out.println("Let add the Yellow color after the Red Color: " + l_list);
+        l_list.add(1, "Yellow");
+        // print the list
+        System.out.println("The linked list:" + l_list);
+        addList(3, l_list, "yellow");
+        System.out.println(l_list);
+    }
+
+    static void addList (int index, LinkedList<String> list, String color){
+        list.add(index, color);
+    }
+}
+
+ */
+/*
+6. Write a Java program to insert elements into the linked list at the first and last positions.
+
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class Kata {
+    public static void main(String[] args) {
+        // create an empty linked list
+        LinkedList<String> l_list = new LinkedList<String>();
+        // use add() method to add values in the linked list
+        l_list.add("Red");
+        l_list.add("Green");
+        l_list.add("Black");
+        System.out.println("Original linked list:" + l_list);
+        // Add an element at the beginning
+        l_list.addFirst("White");
+
+        // Add an element at the end of list
+        l_list.addLast("Pink");
+        System.out.println("Final linked list:" + l_list);
+        addFirstAndLast(l_list);
+        System.out.println("method " + l_list);
+    }
+    static void addFirstAndLast(LinkedList<String> list){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input first element: ");
+        String first = scanner.nextLine();
+        System.out.println("Input last element:");
+        String last = scanner.nextLine();
+        list.addFirst(first);
+        list.addLast(last);
+        scanner.close();
+    }
+}
+
+ */
+
+/*
+7. Write a Java program to insert the specified element at the front of a linked list.
+
+import java.util.LinkedList;
+public class Kata {
+    public static void main(String[] args) {
+        // create an empty linked list
+        LinkedList<String> l_list = new LinkedList<String>();
+        // use add() method to add values in the linked list
+        l_list.add("Red");
+        l_list.add("Green");
+        l_list.add("Black");
+        System.out.println("Original linked list:" + l_list);
+        // Add an element to front of LinkedList
+        l_list.offerFirst("Pink"); // offerFirst zwraca false, addFirst wyrzuca wyjątek
+        System.out.println("Final linked list:" + l_list);
+    }
+}
+ */
+ /*
+ 8. Write a Java program to insert the specified element at the end of a linked list.
+
+import java.util.LinkedList;
+public class Kata {
+    public static void main(String[] args) {
+        // create an empty linked list
+        LinkedList<String> l_list = new LinkedList<String>();
+        // use add() method to add values in the linked list
+        l_list.add("Red");
+        l_list.add("Green");
+        l_list.add("Black");
+        System.out.println("Original linked list:" + l_list);
+        // Add an element at the end of a linked list
+        l_list.offerLast("Pink");
+        System.out.println("Final linked list:" + l_list);
+    }
+}
+  */
+  /*
+  9. Write a Java program to insert some elements at the specified position into a linked list.
+
+import java.util.LinkedList;
+public class Kata {
+    public static void main(String[] args) {
+        // create an empty linked list
+        LinkedList <String> l_list = new LinkedList <String> ();
+        // use add() method to add values in the linked list
+        l_list.add("Red");
+        l_list.add("Green");
+        l_list.add("Black");
+
+        // print original list
+        System.out.println("Original linked list:" + l_list);
+
+        // create a new collection and add some elements
+
+        LinkedList <String> new_l_list = new LinkedList <String> ();
+        new_l_list.add("White");
+        new_l_list.add("Pink");
+
+        // Add the collection in the second position of the existing linked list
+        l_list.addAll(1, new_l_list);
+
+        // print the new list
+        System.out.println("LinkedList:" + l_list);
+    }
+    static void listInserter(LinkedList<String> list, String element){
+    }
+}
+   */
+/*
+10. Write a Java program to get the first and last occurrence of the specified elements in a linked list.
+
+import java.util.LinkedList;
+import java.util.Iterator;
+public class Kata {
+    public static void main(String[] args) {
+        // create an empty linked list
+        LinkedList<String> l_list = new LinkedList<String>();
+        // use add() method to add values in the linked list
+        l_list.add("Red");
+        l_list.add("Green");
+        l_list.add("Black");
+        l_list.add("Pink");
+        l_list.add("orange");
+
+        // print original list
+        System.out.println("Original linked list:" + l_list);
+
+        // Find first element of the List
+        Object first_element = l_list.getFirst();
+        System.out.println("First Element is: "+first_element);
+
+        // Find last element of the List
+        Object last_element = l_list.getLast();
+        System.out.println("Last Element is: "+last_element);
+        Object ad = getFirstElement(l_list);
+        System.out.println("method: " + ad);
+
+    }
+    static Object getFirstElement(LinkedList<String> list){
+        return list.getFirst();
+    }
+    static Object getLastElement(LinkedList<String> list){
+        return list.getLast();
+    }
+}
+
+ */
+/*
+11. Write a Java program to display elements and their positions in a linked list.
+
+import java.util.LinkedList;
+import java.util.Iterator;
+public class Kata {
+    public static void main(String[] args) {
+        // create an empty linked list
+        LinkedList<String> l_list = new LinkedList<String>();
+        // use add() method to add values in the linked list
+        l_list.add("Red");
+        l_list.add("Green");
+        l_list.add("Black");
+        l_list.add("Pink");
+        l_list.add("orange");
+
+        // print original list
+        System.out.println("Original linked list:" + l_list);
+        for(int p=0; p < l_list.size(); p++)
+        {
+            System.out.println("Element at index "+p+": "+l_list.get(p));
+        }
+        listPrinter(l_list);
+
+    }
+    static void listPrinter(LinkedList<String> list){
+        for (int i = 0; i< list.size(); i++){
+            System.out.println("Element at index: " + i + " : " + list.get(i));
+        }
+    }
+}
+ */
+/*
+Remove:
+l_list.remove(2);
+13. Write a Java program to remove the first and last elements from a linked list.
+/ Remove the first element
+    Object firstElement = l_list.removeFirst();
+  // Remove the last element
+    Object lastElement = l_list.removeLast();
+    System.out.println("Element removed: "+ lastElement);
+
+14. Write a Java program to remove all elements from a linked list.
+l_list.clear();
+
+15. Write a Java program that swaps two elements in a linked list
+ Collections.swap(l_list, 0, 2);
+
+ 16. Write a Java program to shuffle elements in a linked list
+ Collections.shuffle(l_list);
+
+ 17. Write a Java program to join two linked lists
+    // Let join above two list
+    LinkedList<String> list1 = new LinkedList<>();
+    LinkedlIst <String> list2 = new LinkedList<>();
+        LinkedList <String> a = new LinkedList <String> ();
+        a.addAll(list1);
+        a.addAll(list2);
+
+18. Write a Java program to copy a linked list to another linked list.
+ LinkedList<String> list1 = new LinkedList<>();
+ LinkedList <String> newc1 = new LinkedList <String> ();
+ newc1 = (LinkedList)list1.clone();
+
+ 19. Write a Java program to remove and return the first element of a linked list.
+ System.out.println("Removed element: "+c1.pop());
+
+ 20. Write a Java program to retrieve, but not remove, the first element of a linked list.
+ String x = c1.peekFirst();
+    System.out.println("First element in the list: " + x);
+
+ 21. Write a Java program to retrieve, but not remove, the last element of a linked list
+     String x = c1.peekLast();
+    System.out.println("Last element in the list: " + x);
+
+22. Write a Java program to check if a particular element exists in a linked list
+// Checks whether the color "Green" exists or not.
+    if (c1.contains("Green")) {
+       System.out.println("Color Green is present in the linked list.");
+    } else {
+       System.out.println("Color Green is not present in the linked list.");
+     }
+
+ 23. Write a Java program to convert a linked list to an array list.
+   /Convert a linked list to array list
+     List<String> list = new ArrayList<String>(linked_list);
+
+24. Write a Java program to compare two linked lists.
+//comparison output in linked list
+          LinkedList<String> c3 = new LinkedList<String>();
+          for (String e : c1)
+             c3.add(c2.contains(e) ? "Yes" : "No");
+          System.out.println(c3);
+
+25. Write a Java program to check if a linked list is empty or not.
+System.out.println("Check the above linked list is empty or not! "+c1.isEmpty());
+
+26. Write a Java program to replace an element in a linked list
+  c1.set(1, "Orange");
+ */
+
+/*
+HashSet
+1. Write a Java program to append the specified element to the end of a hash set.
+import java.util.HashSet;
+  public class Exercise1 {
+  public static void main(String[] args) {
+     // Create a empty hash set
+     HashSet<String> h_set = new HashSet<String>();
+   // use add() method to add values in the hash set
+          h_set.add("Red");
+          h_set.add("Green");
+          h_set.add("Black");
+          h_set.add("White");
+          h_set.add("Pink");
+          h_set.add("Yellow");
+   // print the hash set
+   System.out.println("The Hash Set: " + h_set);
+   }
+}
+
+2. Write a Java program to iterate through all elements in a hash list.
+// set Iterator
+    Iterator<String> p = h_set.iterator();
+  // Iterate the hash set
+   while (p.hasNext()) {
+   System.out.println(p.next());
+   }
+
+3. Write a Java program to get the number of elements in a hash set.
+ System.out.println("Size of the Hash Set: " + h_set.size());
+
+4. Write a Java program to empty a hash set.
+  h_set.removeAll(h_set);
+
+5. Write a Java program to test if a hash set is empty or not.
+System.out.println("Checking the above array list is empty or not! "+h_set.isEmpty());
+
+6. Write a Java program to clone a hash set to another hash set.
+HashSet <String> new_h_set = new HashSet <String> ();
+          new_h_set = (HashSet)h_set.clone();
+          System.out.println("Cloned Hash Set: " + new_h_set);
+
+7. Write a Java program to convert a hash set to an array.
+String[] new_array = new String[h_set.size()];
+      h_set.toArray(new_array);
+     // Displaying Array elements
+     System.out.println("Array elements: ");
+      for(String element : new_array){
+        System.out.println(element);
+     }
+
+8. Write a Java program to convert a hash set to a tree set.
+  HashSet<String> h_set = new HashSet<String>();
+   // use add() method to add values in the hash set
+          h_set.add("Red");
+          h_set.add("Green");
+ // Create a TreeSet of HashSet elements
+     Set<String> tree_set = new TreeSet<String>(h_set);
+
+10. Write a Java program to compare two hash set.
+ HashSet<String>result_set = new HashSet<String>();
+         for (String element : h_set){
+             System.out.println(h_set2.contains(element) ? "Yes" : "No");
+          }
+
+11. Write a Java program to compare two sets and retain elements that are the same.
+   h_set1.retainAll(h_set2);
+12. Write a Java program to remove all elements from a hash set.
+  h_set.clear();
+  ====================================================================================
+ */
+
+//
+//import java.util.ArrayList;
+//import java.util.Collections;
+//import java.util.Scanner;
+
+/*
+Write a program that adds only unique elements to the list.
+
+class Kata{
+    public static void main(String[] args) {
+uniqueList();
+    }
+    static void uniqueList(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("How many numbers do you want to enter?");
+        int size = scanner.nextInt();
+        scanner.nextLine();
+        ArrayList<Integer> integers = new ArrayList<>();
+        for (int i = 0; i < size; i++) {
+            System.out.println("Please enter the number: ");
+            int temp = scanner.nextInt();
+            scanner.nextLine();
+            if(!integers.contains(temp)){
+                integers.add(temp);
+            } else {
+                System.out.println("This number is already in list!");
+            }
+        }
+        Collections.sort(integers);
+        System.out.println(integers);
+
+    }
+}
+ */
+/*
+Program do dodawania elementów do listy
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Kata {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        mainLoop(list);
+    }
+    static void mainLoop(ArrayList<String> list){
+        Scanner scanner = new Scanner(System.in);
+        boolean closeProgram = false;
+        do{
+            printUserOptions();
+            int userOption = scanner.nextInt();
+
+            if (userOption==1) {
+                addElement(list);
+            } else if(userOption == 2){
+                removeElement(list);
+            } else if(userOption == 3){
+                displayList(list);
+            } else if(userOption == 4){
+                closeProgram();
+                closeProgram = true;
+
+            }
+        }while(!closeProgram);
+    }
+
+    private static void closeProgram() {
+        System.out.println("Bye bye");
+    }
+
+    private static void displayList(ArrayList<String> list) {
+        System.out.println(list);
+
+    }
+
+    private static void removeElement(ArrayList<String> list) {
+        Scanner scanner2 = new Scanner(System.in);
+        System.out.println("At which index, do you want to remove an element?");
+        int indexToRemove = scanner2.nextInt();
+        list.remove(indexToRemove);
+        System.out.println("Element removed");
+
+    }
+
+    private static void printUserOptions() {
+        System.out.println("1. Add");
+        System.out.println("2. Remove");
+        System.out.println("3. Display");
+        System.out.println("4. Exit");
+    }
+    private static void addElement(ArrayList<String> list){
+        Scanner scanner2 = new Scanner(System.in);
+            System.out.println("Input element to the list:");
+            String input = scanner2.nextLine();
+            list.add(input);
+            System.out.println(input + " has been added to the list");
+        }
+    }
+ */
+/*
+# Program do odwracania stringa
+
+class Kata {
+    public static void main(String[] args) {
+        System.out.println(reverseString("dog"));
+
+    }
+    static String reverseString(String word){
+        char[] letters = new char[word.length()];
+
+        int letterIndex = 0;
+        for (int i = word.length() - 1; i >=0 ; i--) {
+            letters[letterIndex] = word.charAt(i);
+            letterIndex++;
+
+        }
+        String reverse = "";
+        for (int i = 0; i < word.length(); i++) {
+            reverse = reverse + letters[i];
+
+        }
+        return reverse;
+    }
+}
+ */
 
 
+/*
+Java strumienie
 
+
+import java.util.List;
+import java.util.stream.Stream;
+
+class Kata{
+    public static void main(String[] args) {
+        List<String> list = List.of("Pies", "kot");
+        Stream<String> stream = list.stream();
+        stream.forEach(s-> System.out.println(s));
+
+    }
+}
+ */
+
+import java.util.*;
+
+/*
+ #Write a method that returns the maximum value in an ArrayList of Integers.
+
+class Kata {
+    public static void main(String[] args) {
+       ArrayList<Integer> integers = new ArrayList<>();
+       integers.add(1);
+       integers.add(2);
+       integers.add(3);
+       integers.add(4);
+       integers.add(5);
+
+        System.out.println(maxValue(integers));
+    }
+    static int maxValue(ArrayList<Integer> list){
+        if(list.size() == 0){
+            return 0;
+        }
+        Collections.sort(list);
+        Collections.reverse(list);
+        int max = list.get(0);
+        return max;
+    }
+}
+
+ */
+/*
+# Write a method that calculates the sum of the items
+
+class Kata{
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1,4,7,3,6));
+        System.out.println(sumScores(list));
+    }
+    static int sumScores(ArrayList<Integer> list){
+        int sum = 0;
+        for (int i = 0; i < list.size(); i++) {
+            sum += list.get(i);
+        }
+        return sum;
+    }
+}
+
+ */
+
+/*
+Write a method that finds the average value in a list
+
+class Kata {
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1,4,7,3,6));
+        System.out.println(average(list));
+    }
+    static double average(ArrayList<Integer> list){
+        double sum = 0;
+        for (int i = 0; i < list.size(); i++) {
+            sum+= list.get(i);
+        }
+        return sum / list.size();
+
+    }
+}
+
+ */
+/*
+Remove words too short
+Let the user choose how many words they want to input
+Read that many words
+Let the user choose a number bigger than 0
+Remove all words from the ArrayList that are shorter than the given number
+Example:
+
+Input:
+4 // four words
+Ananas
+Zimtzitroneneis
+Apple
+Zartbitterschokolade
+6 // remove all shorter than six
+
+Output:
+Zimtzitroneneis
+Zartbitterschokolade
+
+class Kata {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<String> list = new ArrayList<>();
+
+        System.out.println("How many words do you want to input?");
+        int wordsNumber = scanner.nextInt();
+        scanner.nextLine();
+        for (int i = 0; i < wordsNumber; i++) {
+            list.add(scanner.nextLine());
+        }
+        System.out.println("Choose number bigger than 0");
+        int userNumber = scanner.nextInt();
+        scanner.nextLine();
+        for (int i = 0; i < list.size(); i++) {
+            if(list.get(i) < userNumber)
+
+        }
+    }
+}
+
+ */
