@@ -2841,3 +2841,64 @@ class Kata {
 }
 
  */
+/*
+# two sum target
+
+class Kata {
+    public int[] twoSum(int[] nums, int target){
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums.length; j++) {
+                if (nums[i] + nums[j] == target)
+                    return new int[]{i, j};
+
+            }
+        }
+        return nums;
+    }
+}
+
+ */
+/*
+# Create an ArrayList in Java and add the days of the week. Also, display the ArrayList.
+
+class Kata {
+    public static void main(String[] args) {
+        List<String> weekDays = new ArrayList<>();
+        weekDays.add("Monday");
+        weekDays.add("Tuesday");
+        weekDays.add("Wednesday");
+        weekDays.add("Thursday");
+        weekDays.add("Friday");
+        weekDays.add("Saturday");
+        weekDays.add("Sunday");
+
+        System.out.println(weekDays);
+
+        Iterator<String> weekDaysIterator = weekDays.iterator();
+        while(weekDaysIterator.hasNext()){
+            System.out.println("Week day: " + weekDaysIterator.next());
+        }
+
+        }
+    }
+
+ */
+/*
+# Write a program that creates an ArrayList of strings and displays its elements using an iterator.
+ */
+
+class Kata {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+
+        list.add("ala1");
+        list.add("ala2");
+        list.add("ala3");
+        list.add("ala4");
+
+        Iterator<String> listIterator = list.iterator();
+        while(listIterator.hasNext()){
+            System.out.println(listIterator.next());
+        }
+    }
+}
