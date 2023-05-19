@@ -2885,11 +2885,19 @@ class Kata {
  */
 /*
 # Write a program that creates an ArrayList of strings and displays its elements using an iterator.
- */
+
 
 class Kata {
     public static void main(String[] args) {
         ArrayList<String> list = new ArrayList<>();
+        ArrayList<Object> list2 = new ArrayList <>();
+        list2.add("ddd");
+        list2.add(2);
+        list2.add(11122.33);
+        System.out.println(list2);
+        System.out.println(list.get(1));
+
+
 
         list.add("ala1");
         list.add("ala2");
@@ -2900,5 +2908,165 @@ class Kata {
         while(listIterator.hasNext()){
             System.out.println(listIterator.next());
         }
+    }
+} */
+
+/*
+ArrayList
+1. Create a new array list, add some colors (String) and print out the collection.
+
+2. Iterate through all elements in an array list.
+
+3. Insert an element into the array list at the first position.
+
+4. Retrieve an element (at a specified index) from a given array list.
+
+5. Update a specific array element by given element.
+
+6. Remove the third element from an array list.
+
+7. Search an element in an array list.
+
+8. Sort a given array list.
+
+9. Shuffle elements in an array list.
+
+10. Reverse elements in an array list.
+
+11. Swap two elements in an array list.
+
+12. Extract a portion of an array list.
+
+13. Replace the second element of an ArrayList with the specified element.
+
+14. Empty an array list.
+
+15. Test an array list is empty or not.
+
+16. Copy one array list into another.
+
+
+class Kata {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("red");
+        list.add("blue");
+        list.add("yellow");
+        list.add("purple");
+        list.add("white");
+        list.add(0, "pink");
+
+
+
+        System.out.println(list.get(3));
+        System.out.println(list.set(1, "brown"));
+        for (String elem : list){
+            System.out.print(elem + " ");
+        }
+
+        list.remove(2);
+
+        for (String elem : list){
+            System.out.print(elem + " ");
+        }
+        System.out.println();
+        if (list.contains("white")){
+            System.out.println("Found");
+        } else
+            System.out.println("Did not found");
+        System.out.println("list before sort " + list);
+       Collections.sort(list);
+        System.out.println("List after sort"  + list);
+        Collections.shuffle(list);
+        System.out.println(list);
+        Collections.reverse(list);
+        System.out.println(list);
+        Collections.swap(list, 0, 1);
+        System.out.println(list);
+        List<String> list2 =  list.subList(1, 3);
+        System.out.println(list2);
+        list.removeAll(list);
+        System.out.println(list);
+        boolean isEmpty = list.isEmpty();
+        System.out.println(isEmpty);
+
+        list2.add("111");
+        list.add("222");
+        Collections.copy(list, list2);
+        System.out.println(list);
+    }
+}
+
+*/
+
+/*
+# Write a method that returns the maximum value in an ArrayList of Integers.
+
+class Kata {
+    public static void main(String[] args) {
+        ArrayList<Integer> lista = new ArrayList<>(Arrays.asList(1,2,3,4,5));
+//        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1234,435,547,8678,465));
+
+        long startTime = System.nanoTime();
+        System.out.println(max2(lista));
+        long endTime = System.nanoTime();
+        System.out.println("That took " + (endTime - startTime) + " milliseconds");
+//        System.out.println(max2(lista));
+    }
+
+
+//    static int max(ArrayList<Integer> list)
+//    {
+//       if (list.size() == 0){
+//           return 0;
+//       }
+//       Collections.sort(list);
+//       Collections.reverse(list);
+//       return list.get(0);
+//    }
+
+
+//    drugi sposób
+    static int max2(ArrayList<Integer> list){
+        int max2 = list.get(0);
+        for (int i = 1; i < list.size(); i++) {
+            if(max2 < list.get(i))
+                max2 = list.get(i);
+        }
+        return max2;
+    }
+}
+
+
+class Kata {
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(4,3,7,8,1));
+        System.out.println(listConverter(list));
+
+    }
+    public static int listConverter(ArrayList<Integer> list){
+        int firstIndex = list.get(0);
+        for (int i = 1; i < list.size(); i+=2) {
+            if(i == list.size()-1){
+                firstIndex += list.get(i);
+            } else {
+                firstIndex += list.get(i) * list.get(i + 1);
+            }
+        }
+        return firstIndex;
+    }
+} */
+
+class Kata {
+    public static void main(String[] args) {
+        int[] array = {5,10,20,25};
+
+        int sum = 0;
+        for (int i = 0; i <array.length ; i++) {
+            sum += array[i];
+        }
+        System.out.println(sum);
+
+
     }
 }
