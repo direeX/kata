@@ -3057,18 +3057,63 @@ class Kata {
     }
 } */
 
-class Kata {
+//class Kata {
+//    public static void main(String[] args) {
+//        int[] array = {5,10,20,25};
+//
+//        int sum = 0;
+//        for (int i = 0; i <array.length ; i++) {
+//            sum += array[i];
+//        }
+//
+//        System.out.println(sum);
+//
+//
+//
+//    }
+//}
+
+// brit 1
+//class Kata {
+//    public static void main(String[] args) {
+//        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(2,6,9,3,1,0,5));
+//
+//        System.out.println(arrayConverter(list));
+//    }
+//
+//    static ArrayList<Integer> arrayConverter(ArrayList<Integer> list){
+//        ArrayList<Integer> evenList = new ArrayList<>();
+//        ArrayList<Integer> oddList = new ArrayList<>();
+//        for (int i = 0; i < list.size(); i++) {
+//            if(i%2!=0){
+//                oddList.add(list.get(i));
+//            } else {
+//                evenList.add(list.get(i));
+//            }
+//        }
+//        oddList.addAll(evenList);
+//        return oddList;
+//    }
+//}
+
+//brit 2
+class Kata{
     public static void main(String[] args) {
-        int[] array = {5,10,20,25};
-
-        int sum = 0;
-        for (int i = 0; i <array.length ; i++) {
-            sum += array[i];
+    ArrayList<Integer> list = new ArrayList<>(Arrays.asList(4,3,7,8,1));
+        System.out.println(listMultiplier(list));
+    }
+    static int listMultiplier(ArrayList<Integer> list) {
+        int sum = list.get(0);
+        for (int i = 1; i < list.size(); i+=2) {
+            if(i == list.size() - 1){
+                sum += list.get(i);
+            } else {
+                sum+= list.get(i) * list.get(i + 1);
+            }
         }
-
-        System.out.println(sum);
-
-
+        return sum;
 
     }
+
+
 }
