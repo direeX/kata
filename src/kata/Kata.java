@@ -3111,6 +3111,7 @@ class Kata{
                 sum+= list.get(i) * list.get(i + 1);
             }
         }
+
         return sum;
 
     }
