@@ -3112,6 +3112,7 @@ class Kata{
             }
         }
 
+
         return sum;
 
     }
