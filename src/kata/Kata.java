@@ -3097,23 +3097,42 @@ class Kata {
 //}
 
 //brit 2
-class Kata{
-    public static void main(String[] args) {
-    ArrayList<Integer> list = new ArrayList<>(Arrays.asList(4,3,7,8,1));
-        System.out.println(listMultiplier(list));
-    }
-    static int listMultiplier(ArrayList<Integer> list) {
-        int sum = list.get(0);
-        for (int i = 1; i < list.size(); i+=2) {
-            if(i == list.size() - 1){
-                sum += list.get(i);
-            } else {
-                sum+= list.get(i) * list.get(i + 1);
-            }
-        }
-        return sum;
+//class Kata{
+//    public static void main(String[] args) {
+//    ArrayList<Integer> list = new ArrayList<>(Arrays.asList(4,3,7,8,1));
+//        System.out.println(listMultiplier(list));
+//    }
+//    static int listMultiplier(ArrayList<Integer> list) {
+//        int sum = list.get(0);
+//        for (int i = 1; i < list.size(); i+=2) {
+//            if(i == list.size() - 1){
+//                sum += list.get(i);
+//            } else {
+//                sum+= list.get(i) * list.get(i + 1);
+//            }
+//        }
+//        return sum;
+//
+//    }
+//
+//
+//}
+//class Kata {
+//   Kata(){
+//       System.out.println("Domyślny");
+//   }
+//   Kata(int x){
+//       this();
+//       System.out.println(x);
+//   }
+//   Kata(int x, int y){
+//       this(5);
+//       System.out.println(x * y);
+//
+//   }
+//
+//    public static void main(String[] args) {
+//        new Kata(8, 10);
+//    }
+//}
 
-    }
-
-
-}
