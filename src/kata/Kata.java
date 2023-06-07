@@ -3136,4 +3136,13 @@ class Kata {
 //    }
 //}
 
+public class Kata {
 
+    public static void main(String[] args) {
+
+    }
+    public static int[] invert(int[] array) {
+        array.forEach(name ->);
+    }
+
+}
