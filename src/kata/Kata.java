@@ -3139,10 +3139,17 @@ class Kata {
 public class Kata {
 
     public static void main(String[] args) {
+        int[] arr = {2, 4, 5, 6, 8};
 
+        System.out.println(Arrays.toString(invert(arr)));
     }
     public static int[] invert(int[] array) {
-        array.forEach(name ->);
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = array[i] * -1;
+
+        }
+        return array;
     }
 
 }
